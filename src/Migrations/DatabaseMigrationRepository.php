@@ -37,7 +37,7 @@ class DatabaseMigrationRepository extends IlluminateDatabaseMigrationRepository
      */
     public function getConnection()
     {
-        return $this->resolver->connection($this->connection);
+        return $this->resolver->connection('arangodb');
     }
 
     /**
