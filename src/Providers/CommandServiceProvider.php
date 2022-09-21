@@ -6,7 +6,7 @@ use Illuminate\Database\MigrationServiceProvider as IlluminateMigrationServicePr
 use LaravelFreelancerNL\Aranguent\Console\Migrations\AranguentConvertMigrationsCommand;
 use LaravelFreelancerNL\Aranguent\Console\Migrations\MigrateMakeCommand;
 use LaravelFreelancerNL\Aranguent\Console\ModelMakeCommand;
-use LaravelFreelancerNL\Aranguent\Migrations\DatabaseMigrationRepository;
+use Illuminate\Database\Migrations\DatabaseMigrationRepository;
 use LaravelFreelancerNL\Aranguent\Migrations\MigrationCreator;
 
 class CommandServiceProvider extends IlluminateMigrationServiceProvider
