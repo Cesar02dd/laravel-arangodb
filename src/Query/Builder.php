@@ -228,7 +228,12 @@ class Builder extends IlluminateQueryBuilder
      */
     public function insertGetId(array $values, $sequence = null)
     {
-        $this->grammar->compileInsertGetId($this, $values, $sequence)->setAql();
+        if(isset($sequence)){
+            $this->grammar->compileInsertGetId($this, $values, $sequence)->setAql();
+        }
+        else{
+            $this->grammar->compileInsertGetId($this, $values)->setAql();
+        }
         $response = $this->getConnection()->execute($this->aqb);
         $this->aqb = new QueryBuilder();
 
