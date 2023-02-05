@@ -158,10 +158,6 @@ class Grammar extends FluentAqlGrammar
         }
         $table = $this->prefixTable($builder->from);
 
-        if (isset($sequence)) {
-            $sequence = $this->convertIdToKey($sequence);
-        }
-
         if (empty($values)) {
             $builder->aqb = $builder->aqb->insert('{}', $table)
                 ->return('NEW.' . $sequence);
